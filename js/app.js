@@ -1,10 +1,11 @@
 window.onload = () => {
     firebase.auth().onAuthStateChanged((user) => {
-        if (user) { //Si está logeado, mostraremos la opción loggedIn
-            loggedIn.style.display = "block";
-            loggedOut.style.display = "none";
-            username.innerText = user.displayName;
-        } else { //Si NO está logeado, mostraremos la opción loggedOut
+        if (user) { 
+            location.href = "file:///home/cynthia/Documentos/social%20network/scl-2018-05-bc-core-pm-socialnetwork/muro.html";
+            // loggedIn.style.display = "block";
+            // loggedOut.style.display = "none";
+            // username.innerText = user.displayName;
+        } else { 
             loggedIn.style.display = "none";
             loggedOut.style.display = "block";
         }
