@@ -1,0 +1,27 @@
+.heart, .trash , .like {
+	margin:1em;
+	float: right;
+	cursor: pointer;
+}
+
+.trash :hover {
+	color: #1DA1F2;
+	cursor: pointer;
+}
+
+.like {
+    color: blue;
+    cursor: pointer;
+
+}
+
+
+.red {
+	color: #FC1E26;
+	cursor: pointer;
+}
+
+p {
+	display: inline-block;
+	margin-left: 0.5em;
+}
