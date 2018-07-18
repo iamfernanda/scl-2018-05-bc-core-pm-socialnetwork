@@ -1,10 +1,10 @@
 const boton = document.getElementById('btn');
  
 boton.addEventListener('click', () => {
-   let comments = document.getElementById('comment').value;// rescato el valor del texto que se introduces
+   let comments = document.getElementById('comment').value;// rescato el valor del texto que se introducesloggedOut
   document.getElementById('comment').value = '';// para mantener limpio el area de texto
   const cont = document.getElementById('cont');
-  const newComments = document.createElement('div');
+  const newComments = document.createElement('div');loggedOut
   const like = document.createElement('i');
   like.classList.add('fa', 'fa-thumbs-up', 'like');
   //const smile = document.createElement('i');
