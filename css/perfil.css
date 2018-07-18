@@ -13,11 +13,27 @@ header nav a img {
     width: 30%;
    
     }
-#boxImagenFondo {
+#box1 {
     width: 100%;
     height: 300px;
     background: red;
 }
 
+#box2 {
+    width: 100%;
+    height: 300px;
+    background: blue;
+}
 
+#box3 {
+    width: 100%;
+    height: 100px;
+    background:rebeccapurple;
+}
+
+#box4 {
+    width: 100%;
+    height: 300px;
+    background:rosybrown;
+}
 
