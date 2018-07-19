@@ -43,4 +43,25 @@ funcion subirPost()
 //     }
 //   });
 // }
+<div id="plusone-div"></div>
+<div id="fb-root"></div>
+<div class="fb-like"></div><br />
 
+<script type="text/javascript">
+function renderPlusone() {
+gapi.plusone.render("plusone-div");}
+function renderIlike() {
+var element = document.createElement('script'); 
+element.type = "text/javascript"; 
+element.id = "facebook-jssdk"
+element.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
+var s = document.getElementsByTagName('script')[0]; 
+s.parentNode.insertBefore(element, s);};
+window.onload=function(){
+renderPlusone();
+renderIlike();}
+</script>
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+{"parsetags": "onload"}
+</script>
