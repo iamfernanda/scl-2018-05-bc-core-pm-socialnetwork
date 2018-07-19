@@ -13,69 +13,83 @@
 </head>
 
 <body>
-<!-- Perfil -->
-<header id="menu">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"><!-- MENU -->
-       <a class="navbar-brand" href="#"><img src="../img/logoFemmesText.png" alt=""></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-                </button>
-                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                     <ul class="navbar-nav mr-auto">
-                       <li class="nav-item active">
-                         <a class="nav-link" href="#">Muro<span class="sr-only">(current)</span></a>
-                           </li>
-                          <li class="nav-item">
+<!-- Perfil / Menu -->
+        <header id="menu">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <img src="../img/logoBlanco.png" alt="">        
+                <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Muro</a>
+                            </li>
+                            <li class="nav-item">
                             <a class="nav-link" href="#">Perfil</a>
-                             </li>
-                       <li class="nav-item"></li>
-                     </ul>
-                     <form class="form-inline my-2 my-lg-0">
-                       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="busca amigos">
-                       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ir</button>
-                     </form>
-                   </div>
-                 </nav>
-   </header>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="busqueda">
+                            <button id="ir" class="btn btn-outline-success my-2 my-sm-0" type="submit">Ir</button>
+                        </form>
+                    </div>
+                </nav>
+            </header>
+
+
 
             <!-- Div de avatar y datos personales-->
                 <div class="container-fluid"> 
                     <div class="row">
-                        <div id="box1" class="col-12 col-md-4">
-                          <div id="avatar">
-                              <img style="width: 90%;" src="../img/perfil.jpg" alt="..." class="rounded mx-auto d-block">
-                              <form method="post" accept="image/gif,image/jpeg">
-                                <input type="file" type="submit" name="file" id="file" class="inputfile" onchange="previewImg(this.files[0])" />
-                            </form>
-                            <!-- <input id="inputFile1" class="btn btn-outline-secondary" type="file"> -->
-                          </div> 
-                        </div>  
-                          <div id="box2" class="col-12 col-md-8">
-                           <div>
-                             <h1>Aqui van los datos personales</h1>
-                           </div> 
-                        </div>  
-                    </div>
-                </div>
-            <!-- Div de contenedor de amigos y sección de fotos -->
-            <div class="container-fluid"> 
-                    <div class="row">
-                        <div id="box3" class="col-12 col-md-12">
-                            <div>
-                         <h1>Amigos, fotos</h1>
-                            </div> 
-                        </div>  
-                    </div>
-                </div>
-                <div class="container-fluid"> 
-                        <div class="row">
-                            <div id="box4" class="col-12 col-md-12">
-                                <div>
-                             <h1>publicaciones</h1>
-                                </div> 
-                            </div>  
-                        </div>
-                    </div>
+                        <div id="box1" class="col-6 col-md-4">
+                           <div class="rounded mx-auto d-block" style="width: 12rem; height: 12rem;">
+                               <img class="card-img rounded-circle rounded mx-auto d-block" src="../img/perfil.jpg" alt="">
+                                  <div class="card-body">
+                                     <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+                                 </div>
+                            </div>
+                        </div>     
+                        <div id="box" class="col-6 col-md-4">
+                            <div class="card-body" style="width: 12rem;">
+                                <div class="rounded mx-auto d-block">
+                                    <h5 class="card-title">Julieta anais</h5>
+                                        <a href="#" class="btn btn-primary">Editar</a>
+                                </div>
+                            </div>
+                        </div>    
+                            <div class="container-fluid"> 
+                               <div class="row">
+                                   <div id="box3" class="col-12 col-md-4">
+                                       <div>
+                                          <a href="#" class="btn btn-lg btn-block">Amigos</a>
+                                        </div> 
+                                    </div> 
+                                     <div id="box3" class="col-12 col-md-4">
+                                        <div>
+                                          <a href="#" class="btn btn-lg btn-block">Información</a>
+                                        </div> 
+                                    </div>  
+                                      <div id="box3" class="col-12 col-md-4">
+                                            <div>
+                                              <a href="#" class="btn btn-lg btn-block">Fotos</a>
+                                            </div> 
+                                      </div>  
+                                </div>
+                            </div>
+                            <div class="container-fluid"> 
+                                 <div class="row">
+                                     <div id="box5" class="col-12 col-md-12">
+                                        <a id="tash" class="rounded float-right"><i class="far fa-trash-alt"></i></a>
+                                        <input id="publicacion" type="text" class="rounded mx-auto d-block text-center" placeholder="Aquí....">
+                                        <button id="publica" type="button" class="btn btn-sm rounded float-right">Publicar</button>
+                                        <a id="meGusta" class="rounded float-left"><i class="fas fa-hands-helping"></i> 10</a>
+                                        <a id="comentario" class="rounded float-left"><i class="fas fa-comment-dots"></i> 10</a>
+                                      </div>
+                                    </div>
+                                </div>     
+                              
 
 <!-- se que esto es mala practica es solo mientras  -->
 
