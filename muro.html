@@ -14,7 +14,7 @@
 	<section class="center">
 		<div class="container">
 			<textarea class="txt" id="comment" placeholder="Añade un comentario..."></textarea>
-			<button type="button" id="btn">
+			<button type="button" id="btn" onclick="subirPost()">
 				<i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
 			<!-- contenedor comentarios -->
 			<div id="cont"></div>
@@ -22,8 +22,23 @@
 	</section>
 
 	<!-- Script Files -->
+	<footer>
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyApswAEcggehocM-_C3o59SIclBYguurLg",
+                authDomain: "social-network-7e12c.firebaseapp.com",
+                databaseURL: "https://social-network-7e12c.firebaseio.com",
+                projectId: "social-network-7e12c",
+                storageBucket: "social-network-7e12c.appspot.com",
+                messagingSenderId: "734562839994"
+            };
+            firebase.initializeApp(config);
+        </script>
 	<script src="https://use.fontawesome.com/7873633050.js"></script>
-	<script type="text/javascript" src="js/muro.js"></script>
+	<script type="text/javascript" src="js/muroC.js"></script>
+
 </body>
 
 </html>

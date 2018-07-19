@@ -21,15 +21,25 @@ function writeUserData(userId, name, email, imageUrl) {
     });
   }
 
-funcion subirPost()
+function subirPost()
 {
-  let Post = {};//crea objeto post 
-  Post.post =document.getElementById('muroContent').value;//agrega caracteristica y le da valor a post
+  //let Post = {};//crea objeto post 
+  let contentPost =document.getElementById('comment').value;//agrega caracteristica y le da valor a post
+  const newpostKey = firebase.database().ref().child("muro").push().key;
   let user = firebase.auth().currentUser;//obtengo uid del usuario autentificado
-  var ref =firebase.database().ref("muro/"+ user.uid +"/");//creo objeto que se posiciona en la direccion de database
-  var newref =ref.push();//se crea metodo para agregar objeto con id diferente a la referencia
-  newref.set(post);//se agrega el objeto post
+  console.log(user)
+  firebase.database().ref("muro/"+ newpostKey +"/").set({contenido: contentPost, user: user.email, likes: 0});//se agrega el objeto post
 }
+firebase.database().ref('muro')
+        .limitToLast(5) //Filtro de mensajes cuando se cargan los datos
+        .on('child_added', (newGif)=>{ //Para escuchar datos más veces o doblegados
+            cont.innerHTML += `
+                <p>${newGif.val().contenido}</p>
+                
+                <p>${newGif.val().user}</p>
+                
+            `;
+        });
 
 // //  firebase.database().ref('users/' + userId).set({
 //     username: name,
@@ -43,25 +53,4 @@ funcion subirPost()
 //     }
 //   });
 // }
-<div id="plusone-div"></div>
-<div id="fb-root"></div>
-<div class="fb-like"></div><br />
 
-<script type="text/javascript">
-function renderPlusone() {
-gapi.plusone.render("plusone-div");}
-function renderIlike() {
-var element = document.createElement('script'); 
-element.type = "text/javascript"; 
-element.id = "facebook-jssdk"
-element.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
-var s = document.getElementsByTagName('script')[0]; 
-s.parentNode.insertBefore(element, s);};
-window.onload=function(){
-renderPlusone();
-renderIlike();}
-</script>
-
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-{"parsetags": "onload"}
-</script>
