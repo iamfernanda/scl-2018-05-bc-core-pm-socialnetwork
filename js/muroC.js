@@ -21,10 +21,15 @@ function writeUserData(userId, name, email, imageUrl) {
     });
   }
 
-  var likesCountRef = firebase.database().ref('posts/' + post.likes + '/starCount');
-likesCountRef.on('value', function(snapshot) {
-  updateStarCount(post.likes, snapshot.val());
-});
+funcion subirPost()
+{
+  let Post = {};//crea objeto post 
+  Post.post =document.getElementById('muroContent').value;//agrega caracteristica y le da valor a post
+  let user = firebase.auth().currentUser;//obtengo uid del usuario autentificado
+  var ref =firebase.database().ref("muro/"+ user.uid +"/");//creo objeto que se posiciona en la direccion de database
+  var newref =ref.push();//se crea metodo para agregar objeto con id diferente a la referencia
+  newref.set(post);//se agrega el objeto post
+}
 
 // //  firebase.database().ref('users/' + userId).set({
 //     username: name,
