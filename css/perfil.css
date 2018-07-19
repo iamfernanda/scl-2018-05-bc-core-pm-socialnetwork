@@ -57,7 +57,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#722d91', end
     width: 100%;
     height: 400px;;
     background: white;
-    visibility:;
+    /* visibility: */
 }
 
 #boxAmigos h3{
