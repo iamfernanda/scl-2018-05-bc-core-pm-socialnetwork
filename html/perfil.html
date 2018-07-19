@@ -37,55 +37,104 @@
                     </div>
                 </nav>
             </header>
-
-
-
-            <!-- Div de avatar y datos personales-->
+            <!-- Div de foto perfil y nombre-->
                 <div class="container-fluid"> 
                     <div class="row">
                         <div id="box1" class="col-6 col-md-4">
                            <div class="rounded mx-auto d-block" style="width: 12rem; height: 12rem;">
                                <img class="card-img rounded-circle rounded mx-auto d-block" src="../img/perfil.jpg" alt="">
-                                  <div class="card-body">
+                                  <div class="card">
                                      <button type="button" class="btn btn-secondary btn-sm">Small button</button>
                                  </div>
                             </div>
                         </div>     
-                        <div id="box" class="col-6 col-md-4">
+                        <div id="box1" class="col-6 col-md-4">
                             <div class="card-body" style="width: 12rem;">
-                                <div class="rounded mx-auto d-block">
+                                <div class="rounded">
                                     <h5 class="card-title">Julieta anais</h5>
-                                        <a href="#" class="btn btn-primary">Editar</a>
+                                      <button id="editar" href="#" class="btn"><i class="fas fa-edit"></i></button>
                                 </div>
                             </div>
                         </div>    
+                        <div class="container-fluid"> 
+                                <div class="row">
+                                   <div id="vacio" class="col-12 col-md-12">
+                                     hola</div> 
+                    <!-- Div de amigos, informacion, fotos-->
                             <div class="container-fluid"> 
                                <div class="row">
-                                   <div id="box3" class="col-12 col-md-4">
-                                       <div>
-                                          <a href="#" class="btn btn-lg btn-block">Amigos</a>
-                                        </div> 
-                                    </div> 
+                                  <div id="box3" class="col-12 col-md-4">
+                                     <div>
+                                        <a href="#" class="btn btn-lg btn-block" onclick="amigos()" >Amigos</a>
+                                      </div> 
+                                  </div> 
                                      <div id="box3" class="col-12 col-md-4">
                                         <div>
                                           <a href="#" class="btn btn-lg btn-block">Información</a>
                                         </div> 
                                     </div>  
-                                      <div id="box3" class="col-12 col-md-4">
+                                       <div id="box3" class="col-12 col-md-4">
                                             <div>
                                               <a href="#" class="btn btn-lg btn-block">Fotos</a>
                                             </div> 
                                       </div>  
                                 </div>
                             </div>
+                            <!-- Div espacio vacio aire visual -->
+                            <div class="container-fluid"> 
+                                    <div class="row">
+                                       <div id="vacio" class="col-12 col-md-12">
+                                         </div>
+                            <!-- Div contenedor de amigos -->          
+                                        <section id="boxAmigos" class="container-fluid"> 
+                                           <div class="row">
+                                              <div class="col-12 col-md-12">
+                                                 <div>
+                                                     <h3>AMIGOS</h3>
+                                                 <section id="fotosAmigos" class="container">
+                                                    <div class="row ">
+                                                       <div class="col-12 col-md-4">
+                                                          <div class="card rounded mx-auto d-block" style="width: 10rem;">
+                                                             <img style="width: 100px; margin-top: 5%;"  class="rounded mx-auto d-block" src="../img/FOTO3.jpg" alt="">
+                                                                <div class="card-body">
+                                                                    <p class="card-text">Adriana Lopez</p>
+                                                                </div>
+                                                          </div>
+                                                     </div>
+                                                        <div class="col-12 col-md-4">
+                                                           <div class="card rounded mx-auto d-block" style="width: 10rem;">
+                                                              <img style="width: 100px; margin-top: 5%;"  class="rounded mx-auto d-block" src="../img/FOTO3.jpg" alt="">
+                                                                  <div class="card-body">
+                                                                      <p class="card-text">Adriana Lopez</p>
+                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                         <div class="col-12 col-md-4">
+                                                            <div class="card rounded mx-auto d-block" style="width: 10rem;">
+                                                                <img style="width: 100px; margin-top: 5%;"  class="rounded mx-auto d-block" src="../img/FOTO3.jpg" alt="">
+                                                                    <div class="card-body">
+                                                                       <p class="card-text">Adriana Lopez</p>
+                                                                    </div>
+                                                             </div>
+                                                        </div>
+                                                </section>
+                                            </div> 
+                                        </div> 
+                                    </section>  
+                            <!-- Div espacio vacio aire visual -->
+                                 <div class="container-fluid"> 
+                                    <div class="row">
+                                       <div id="vacio" class="col-12 col-md-12">
+                                         </div>      
+                          <!-- Div Publicaciones --> 
                             <div class="container-fluid"> 
                                  <div class="row">
                                      <div id="box5" class="col-12 col-md-12">
-                                        <a id="tash" class="rounded float-right"><i class="far fa-trash-alt"></i></a>
+                                        <a id="tash" class="btn rounded float-right"><i class="far fa-trash-alt"></i></a>
                                         <input id="publicacion" type="text" class="rounded mx-auto d-block text-center" placeholder="Aquí....">
                                         <button id="publica" type="button" class="btn btn-sm rounded float-right">Publicar</button>
-                                        <a id="meGusta" class="rounded float-left"><i class="fas fa-hands-helping"></i> 10</a>
-                                        <a id="comentario" class="rounded float-left"><i class="fas fa-comment-dots"></i> 10</a>
+                                        <a id="meGusta" class="btn rounded float-left"><i class="fas fa-hands-helping"></i> 10</a>
+                                        <a id="comentario" class="btn rounded float-left"><i class="fas fa-comment-dots"></i> 10</a>
                                       </div>
                                     </div>
                                 </div>     
