@@ -21,10 +21,11 @@ function writeUserData(userId, name, email, imageUrl) {
     });
   }
 
+// funcion de posteos  
 function subirPost()
 {
   //let Post = {};//crea objeto post 
-  let contentPost =document.getElementById('comment').value;//agrega caracteristica y le da valor a post
+  let contentPost =document.getElementById('publicacion').value;//agrega caracteristica y le da valor a post
   const newpostKey = firebase.database().ref().child("muro").push().key;
   let user = firebase.auth().currentUser;//obtengo uid del usuario autentificado
   console.log(user)
