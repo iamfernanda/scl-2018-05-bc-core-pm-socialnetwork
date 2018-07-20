@@ -1,12 +1,35 @@
 
-window.onload = () => {
-  firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-          
-      }else{
-        location.href="http://127.0.0.1:8887/login.html";
-      }
-  });
+var muro = {};// se crea obj muro
+muro.muro_id = "prueba id";
+console.log(muro.muro_id);
+muro.post = [];
+var post = {};// se crea obj post
+post.tipo = "Texto";
+post.likes = 1;
+post.infomuro = "Mi muro";
+
+muro.post.push(post);// agrego obj post al arr de muro
+console.log(muro.post[0].post);
+
+// instancia de firebase
+var database = firebase.database();
+function writeUserData(userId, name, email, imageUrl) {
+    firebase.database().ref('users/' + userId).set({
+      username: name,
+      email: email,
+      profile_picture : imageUrl // aqui se debe agregar el llamado a la foto
+    });
+  }
+
+// funcion de posteos  
+function subirPost()
+{
+  //let Post = {};//crea objeto post 
+  let contentPost =document.getElementById('publicacion').value;//agrega caracteristica y le da valor a post
+  const newpostKey = firebase.database().ref().child("muro").push().key;
+  let user = firebase.auth().currentUser;//obtengo uid del usuario autentificado
+  console.log(user)
+  firebase.database().ref("muro/"+ newpostKey +"/").set({contenido: contentPost, user: user.email, likes: 0});//se agrega el objeto post
 }
 
    function subirPost()
