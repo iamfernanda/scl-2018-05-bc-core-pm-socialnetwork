@@ -1,7 +1,7 @@
 window.onload = () => {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
-            currentUser = firebase.auth().currentUser
+            location.href="http://127.0.0.1:8887/perfil.html";
         }
     });
 }
@@ -37,16 +37,7 @@ firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
         console.log('error de firebase > codigo ' + error.message)
         document.getElementById('message').innerHTML = error.message
     })
-}
-// logout
-function logoutWithFireBase() {
-firebase.auth().signOut()
-    .then(() => {
-        location.href = "index.html";
-        console.log('usuario finalizo su sesion')
-    })
-    .catch();
-}
+
 // login with facebook
 function facebookLoginwithFireBase() {
 const provider = new firebase.auth.FacebookAuthProvider();
@@ -72,7 +63,7 @@ let provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().signInWithPopup(provider).then(function(result) {
     let token = result.credential.accessToken;
     let user = result.user;
-    redirectFromLogin()
+    
 }).catch(function(error) {
     let errorCode = error.code;
     let errorMessage = error.message;
@@ -80,7 +71,4 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
     let credential = error.credential;
 });
 }
-
-function redirectFromLogin() {
-location.href = "post.html";
 }
