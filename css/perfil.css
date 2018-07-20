@@ -27,48 +27,78 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#722d91', end
     width: 100%;
     height: 250px;  
 }
+#box1 #editar i{
+    color: #722d91;
+    border: 0px;
+} 
+
 /* FOTO PERFIL */
 #box1 img { 
     width: 170px;
     height: 170px; 
-    margin-top: 5%; 
+    margin-top: 10%; 
+    margin-bottom: 10%; 
 }
  /* contenedor de amigos,informacion,fotos */
 #box3 {
     width: 100%;
     height: 50px;
     font-weight: 100;
-    border-bottom: 1px solid #efc9f5; 
+    background: #d4145a;
 }
-#box3  a{
-   color: #e19feb;
+#box3 a{
+   color: #fcebfa;
 }
-/* publicaciones */
+#vacio {
+    width: 100%;
+    height: 20px;
+}
+#boxAmigos {
+    width: 100%;
+    height: 400px;;
+    background: white;
+    /* visibility: */
+}
+
+#boxAmigos h3{
+    color: #722d91;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 20px;
+    padding: 1em; 
+}
+
+#fotosAmigos {
+    margin: auto;
+}
+
+
+/* PUBLICACIONES */
 #box5 {
-    background: #fcebfa;
+    background: #f5dee6;
 }
 #box5 #publicacion{
     width: 90%;
     height: 100px; 
     margin-top: 5%; 
     margin-bottom: 5%; 
-    border: 1px solid #e19feb;
+    border: 1px solid #722d91;
 }
 #box5 #tash{
-    color: #e19feb;
+    color: #722d91;
     margin-top: 2%; 
 }
 
 #box5 #meGusta{
     width: 15%;
-    color: #e19feb;
+    color: #722d91;
     margin-bottom: 2%; 
 }
 
 #box5 #comentario{
     margin-left: 20px;
     width: 15%;
-    color: #e19feb;
+    color: #722d91;
     margin-bottom: 2%; 
 }
 #box5 #publica{
@@ -97,19 +127,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#722d91', end
     /* foto perfil*/
     #box1 img { 
         width: 100px;
-        height: 100px;  
+        height: 100px; 
+        margin-bottom: 10%; 
+        margin-top: 10%;  
     }
     #box3 {
         width: 100%;
         height: 30px;
         font-weight: 100;
-        border-bottom: 1px solid #e19feb;
-        background: #f8f6f9;
+        background: #d4145a;
+       
     }
     #box3 a{
-        color: #e19feb;
         font-size: 15px;
         padding: 2px;
+        color: aliceblue;
        
      }
 }
